@@ -17,6 +17,7 @@ export const classyHeader = (level, text, classList = []) => {
   headerEl.innerHTML = text;
   for (const className of classList) {
     headerEl.classList.add(className);
+    console.log(true);
   }
   return headerEl;
 };
