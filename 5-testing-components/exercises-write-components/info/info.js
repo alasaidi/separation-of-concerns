@@ -7,16 +7,19 @@
  * @returns {HTMLDetailsElement}
  */
 export const info = (caption, mainText, id = '') => {
-  const detailsEl = document.createElement('_');
-  _;
+  const detailsEl = document.createElement('table');
+  detailsEl.style.border = '1px solid black';
+  detailsEl.textContent = caption;
 
-  const summaryEl = document.createElement('_');
-  _;
-  _;
+  const summaryEl = document.createElement('tr');
+  summaryEl.style.border = '1px solid black';
+  summaryEl.textContent = mainText;
+  detailsEl.appendChild(summaryEl);
 
-  const pEl = document.createElement('_');
-  _;
-  _;
+  const pEl = document.createElement('td');
+  pEl.style.border = '1px solid black';
+  pEl.textContent = id;
+  summaryEl.appendChild(pEl);
 
   return detailsEl;
 };
