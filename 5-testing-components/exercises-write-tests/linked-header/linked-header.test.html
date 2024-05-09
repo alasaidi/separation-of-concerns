@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title></title>
-  </head>
 
-  <body>
-    <script type="module">
-      import { showComponentTestCase } from '/lib/show-component-test-case.js';
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+
+<body>
+  <script type="module">
+    import { showComponentTestCase } from '/lib/show-component-test-case.js';
 
       import { linkedHeader } from './linked-header.js';
 
-      showComponentTestCase('a header linked to google');
+      showComponentTestCase('a header linked to google',linkedHeader,"google it", "https://www.google.com/");
 
-      showComponentTestCase('a header linked to badgers');
+      showComponentTestCase('a header linked to badgers',linkedHeader,'badger x 3',
+      'https://badgerbadgerbadger.com/',
+      '_self',);
     </script>
-  </body>
+</body>
+
 </html>
