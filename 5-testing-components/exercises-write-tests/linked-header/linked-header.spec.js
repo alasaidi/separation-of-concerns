@@ -43,7 +43,7 @@ describe('linkedHeader: renders an anchor inside a heading', () => {
     );
 
     it('has tagName: "H2"', () => {
-      expect(actual.tagName).toEqual('h2');
+      expect(actual.tagName).toEqual('H2');
     });
     it('has childElementCount: 1', () => {
       expect(actual.childElementCount).toEqual(1);
@@ -52,7 +52,7 @@ describe('linkedHeader: renders an anchor inside a heading', () => {
     describe(`first child`, () => {
       const actualChild = actual.children[0];
       it('has tagName: "A"', () => {
-        expect(actualChild.tagName).toEqual('a');
+        expect(actualChild.tagName).toEqual('A');
       });
       it('has href: "https://badgerbadgerbadger.com/"', () => {
         expect(actualChild.href).toEqual('https://badgerbadgerbadger.com/');
