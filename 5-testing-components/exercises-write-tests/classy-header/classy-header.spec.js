@@ -8,40 +8,40 @@ describe('classyHeader: renders DOM headers of different levels and classes', ()
   describe('an H3 with text: "hello", and no classes', () => {
     const actual = classyHeader(3, 'hello');
     it('has tagName "H3"', () => {
-      expect(classyHeader.tagName).toEqual('h3');
+      expect(actual.tagName).toEqual('H3');
     });
     it('has innerHTML: "hello"', () => {
-      expect(classyHeader.innerHTML).toEqual('hello');
+      expect(actual.innerHTML).toEqual('hello');
     });
     it('has classList length 0', () => {
-      expect(classyHeader.classList.length).toEqual(0);
+      expect(actual.classList.length).toEqual(0);
     });
     it('has className: ""', () => {
-      expect(classyHeader.classList.contains('').toEqual(true));
+      expect(actual.classList.contains('')).toEqual(false);
     });
     it('has childElementCount: 0', () => {
-      expect(classyHeader.childElementCount).toEqual(0);
+      expect(actual.childElementCount).toEqual(0);
     });
   });
   describe('an H1 with text: "good bye", and two classes', () => {
     const actual = classyHeader(1, 'good bye', ['fancy', 'hover-right']);
     it('has tagName "H1"', () => {
-      expect(classyHeader.tagName).toEqual('h1');
+      expect(actual.tagName).toEqual('H1');
     });
     it('has innerHTML: "good bye"', () => {
-      expect(classyHeader.innerHTML).toEqual('good bye');
+      expect(actual.innerHTML).toEqual('good bye');
     });
     it('has classList length 2', () => {
-      expect(classyHeader.classList.length).toEqual(2);
+      expect(actual.classList.length).toEqual(2);
     });
     it('have class: "fancy"', () => {
-      expect(classyHeader.classList.contains('fancy')).toEqual(true);
+      expect(actual.classList.contains('fancy')).toEqual(true);
     });
     it('have class: "hover-right"', () => {
-      expect(classyHeader.classList.contains('hover-right')).toEqual(true);
+      expect(actual.classList.contains('hover-right')).toEqual(true);
     });
     it('has childElementCount: 0', () => {
-      expect(classyHeader.childElementCount).toEqual(0);
+      expect(actual.childElementCount).toEqual(0);
     });
   });
   describe('does not allow invalid header levels', () => {

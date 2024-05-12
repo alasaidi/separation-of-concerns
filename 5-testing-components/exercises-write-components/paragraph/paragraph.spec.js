@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { paragraph } from './1-paragraph.js';
+import { paragraph } from './paragraph.js';
 
 describe('paragraph: renders a paragraph with optional styling', () => {
   describe('"lorem ipsum", no classes', () => {

@@ -12,6 +12,6 @@ export const paragraph = (text, classList = []) => {
     p.classList.add(i);
     console.log(i);
   }
-  p.innerText = text;
+  p.innerHTML = text;
   return p;
 };
